@@ -12,19 +12,17 @@ def index_lapa():
 
 @app.route('/dbtest')
 def db_test():
-  return db_check()
-
-
-def db_check():
     dsn = "host={} dbname={} user={} password={}".format("balarama.db.elephantsql.com", "dwtgtufa", "dwtgtufa", "DzmzOK0aSTWv-kBKOCtzuxqYfyLwZ6Bf")
+    print(dsn)
     conn = psycopg2.connect(dsn)
+    print(conn)
     cur = conn.cursor()
+    print(cur)
     cur.execute("SELECT version();")
     record = cur.fetchone()
-    record = cur.fetchone()
+    result = "You are connected to - " + str(record)
     cur.close()
     conn.close()
-    result = "You are connected to - " + record
     return result
 
 if __name__ == '__main__':

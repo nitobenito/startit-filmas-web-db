@@ -1,13 +1,19 @@
 import os
 import psycopg2
 
-
+# Iegūstam DB informāciju no vides mainīgajiem
+# lai nebūtu jāglabā parole publiski pieejama
 ELEPHANT_HOST = os.getenv("ELEPHANT_HOST", "balarama.db.elephantsql.com")
 ELEPHANT_NAME = os.getenv("ELEPHANT_NAME")
 ELEPHANT_PASSWORD = os.getenv("ELEPHANT_PASSWORD")
 
 
 def test_connection():
+    """Pārbauda pieslēgumu datubāzei
+    
+    Returns:
+        string -- tekstu ar datubāzes versiju
+    """
     dsn = "host={} dbname={} user={} password={}".format(ELEPHANT_HOST, ELEPHANT_NAME, ELEPHANT_NAME, ELEPHANT_PASSWORD)
     conn = psycopg2.connect(dsn)
     cur = conn.cursor()

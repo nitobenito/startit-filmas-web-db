@@ -1,5 +1,6 @@
 import psycopg2
 from flask import Flask
+import data
 
 
 app = Flask('app')
@@ -7,23 +8,13 @@ app = Flask('app')
 
 @app.route('/')
 def index_lapa():
-  return "OK"
+  return data.test_connection()
 
 
-@app.route('/dbtest')
-def db_test():
-    dsn = "host={} dbname={} user={} password={}".format("balarama.db.elephantsql.com", "dwtgtufa", "dwtgtufa", "DzmzOK0aSTWv-kBKOCtzuxqYfyLwZ6Bf")
-    print(dsn)
-    conn = psycopg2.connect(dsn)
-    print(conn)
-    cur = conn.cursor()
-    print(cur)
-    cur.execute("SELECT version();")
-    record = cur.fetchone()
-    result = "You are connected to - " + str(record)
-    cur.close()
-    conn.close()
-    return result
+@app.route('/healthcheck')
+def hc():
+    return "OK"
+
 
 if __name__ == '__main__':
 

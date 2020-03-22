@@ -3,7 +3,7 @@ import psycopg2
 
 # Iegūstam DB informāciju no vides mainīgajiem
 # lai nebūtu jāglabā parole publiski pieejama
-ELEPHANT_HOST = os.getenv("ELEPHANT_HOST", "balarama.db.elephantsql.com")
+ELEPHANT_HOST = os.getenv("ELEPHANT_HOST")
 ELEPHANT_NAME = os.getenv("ELEPHANT_NAME")
 ELEPHANT_PASSWORD = os.getenv("ELEPHANT_PASSWORD")
 

@@ -1,0 +1,7 @@
+ul > li:nth-of-type(odd) {
+  background: lightgoldenrodyellow;
+}
+ul > li:nth-of-type(even) {
+  background: lightgray;
+}
+

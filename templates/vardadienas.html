@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block saturs %}
+<div class="container bootstrap">
+  <div class="row info-box">
+    <div class="col-md-6">
+      <ul>
+        {% for v in vardi %} 
+          <li>{{v.vards}} - {{v.d}}. {{v.m}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6">
+    </div>
+  </div>
+</div>
+{% endblock %}

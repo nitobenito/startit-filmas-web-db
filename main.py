@@ -18,7 +18,7 @@ app = Flask('app')
 
 @app.route('/')
 def index_lapa():
-    return data.test_connection()
+    return render_template('index.html')
 
 
 @app.route('/healthcheck')

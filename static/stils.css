@@ -1,7 +1,10 @@
+ul.vardadienas {
+  list-style-type: none;
+  column-count: 4;
+}
 ul > li:nth-of-type(odd) {
-  background: lightgoldenrodyellow;
+  background: cornsilk;
 }
 ul > li:nth-of-type(even) {
-  background: lightgray;
+  background: beige;
 }
-

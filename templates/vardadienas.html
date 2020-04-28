@@ -2,15 +2,13 @@
 
 {% block saturs %}
 <div class="container bootstrap">
-  <div class="row info-box">
-    <div class="col-md-6">
-      <ul>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="vardadienas">
         {% for v in vardi %} 
-          <li>{{v.vards}} - {{v.d}}. {{v.m}}</li>
+          <li>{{v.vards}} - {{v.d}}/{{v.m}}</li>
         {% endfor %}
       </ul>
-    </div>
-    <div class="col-md-6">
     </div>
   </div>
 </div>

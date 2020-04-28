@@ -3,6 +3,8 @@ import psycopg2
 
 # Iegūstam DB informāciju no vides mainīgajiem
 # lai nebūtu jāglabā parole publiski pieejama
+# Vienkāršam testam var nomainīt šīs vērtības pret konkrētiem lielumiem
+
 ELEPHANT_HOST = os.getenv("ELEPHANT_HOST")
 ELEPHANT_NAME = os.getenv("ELEPHANT_NAME")
 ELEPHANT_PASSWORD = os.getenv("ELEPHANT_PASSWORD")

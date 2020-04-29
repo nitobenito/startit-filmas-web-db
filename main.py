@@ -8,7 +8,8 @@ app = Flask('app')
 
 @app.route('/')
 def index_lapa():
-  return data.test_connection()
+  #return data.test_connection()
+  return "************"
 
 
 @app.route('/healthcheck')

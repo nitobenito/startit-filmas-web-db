@@ -11,8 +11,8 @@ app = Flask('app')
 @app.route('/', methods=["GET", "POST"])
 def index_lapa():
     if request.method == "POST":
-        #data_import.piepilda_vd_tabulu()
-    return render_template('index.html')
+        data_import.piepilda_vd_tabulu()
+    #return render_template('index.html')
 
 
 @app.route('/healthcheck')

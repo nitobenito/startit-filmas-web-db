@@ -3,7 +3,7 @@ import os
 import psycopg2
 from flask import Flask, g, render_template, request
 from data import varda_diena, menesa_vardi, diena
-
+imoprt data_import
 
 app = Flask('app')
 

@@ -4,12 +4,11 @@ import data
 
 
 app = Flask('app')
-
-
 @app.route('/')
-def index_lapa():
-  #return data.test_connection()
-  return "************"
+def index():
+    return render_template('test.html')
+   #return data.test_connection()
+
 
 
 @app.route('/healthcheck')

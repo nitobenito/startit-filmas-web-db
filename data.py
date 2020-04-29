@@ -19,7 +19,7 @@ def test_connection():
     dsn = "host={} dbname={} user={} password={}".format(ELEPHANT_HOST, ELEPHANT_NAME, ELEPHANT_NAME, ELEPHANT_PASSWORD)
     conn = psycopg2.connect(dsn)
     cur = conn.cursor()
-    cur.execute("SELECT version();")
+    cur.execute("select count(autors) from Viesi;")
     record = cur.fetchone()
     result = "You are connected to - " + str(record)
     cur.close()

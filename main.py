@@ -1,7 +1,7 @@
 import datetime
 import os
 import psycopg2
-from flask import Flask, g, render_template
+from flask import Flask, g, render_template, request
 from data import varda_diena, menesa_vardi, diena
 
 
@@ -10,6 +10,8 @@ app = Flask('app')
 
 @app.route('/')
 def index_lapa():
+    if request.method == "POST":
+        
     return render_template('index.html')
 
 

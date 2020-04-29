@@ -43,7 +43,7 @@ def veido_vd_tabulu():
     """
     conn = psycopg2.connect(dsn)
     c = conn.cursor()
-    c.execute("""DROP TABLE vardadienas;""")
+    #c.execute("""DROP TABLE vardadienas;""")
     c.execute("""CREATE TABLE vardadienas
                 (vards TEXT COLLATE "lv-x-icu" PRIMARY KEY, diena INT NOT NULL, menesis INT NOT NULL);""")
     c.execute("""CREATE INDEX d1 ON vardadienas(diena);""")

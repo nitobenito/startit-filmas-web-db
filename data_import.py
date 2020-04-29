@@ -56,13 +56,13 @@ def veido_vd_tabulu():
     return "OK"
 
 
-def piepilda_vd_tabulu(datne):
+def piepilda_vd_tabulu():
     conn = psycopg2.connect(dsn)
     c = conn.cursor()
     sql = "INSERT INTO vardadienas VALUES(%s, %s, %s)"
     
     vardu_dati = [] 
-    with open(datne, "r") as f:
+    with open("vardi.csv", "r") as f:
         reader = csv.reader(f)
         for line in reader:
             vardu_dati.append(line)

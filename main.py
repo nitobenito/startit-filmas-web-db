@@ -8,7 +8,7 @@ from data import varda_diena, menesa_vardi, diena
 app = Flask('app')
 
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def index_lapa():
     if request.method == "POST":
         data_import.veido_vd_tabulu()

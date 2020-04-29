@@ -6,8 +6,8 @@ import data
 app = Flask('app')
 @app.route('/')
 def index():
-    return data.test_connection()
-   #return "**********************"
+   # return data.test_connection()
+   return "**********************"
    
 
 

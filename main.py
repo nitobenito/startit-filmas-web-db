@@ -10,7 +10,8 @@ app = Flask('app')
 
 @app.route('/', methods=["GET", "POST"])
 def index_lapa():
-    return render_template('index.html')
+    return vd_sodien()
+    #return render_template('index.html')
 
 
 @app.route('/healthcheck')

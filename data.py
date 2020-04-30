@@ -13,7 +13,7 @@ def varda_diena(vards):
 
 def menesa_vardi(menesis):
     sql = "SELECT * FROM vardadienas WHERE menesis=%s ORDER BY diena"
-    m = (menesis,)
+    m = (menesis)
     atbilde = get_all(sql, m)
     return atbilde
 

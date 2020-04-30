@@ -6,14 +6,14 @@ from db import get_one, get_all
 
 def varda_diena(vards):
     sql = "SELECT * FROM vardadienas WHERE vards=%s ORDER BY vards"
-    t = (vards,)
+    t = (vards)
     atbilde = get_one(sql, t)
     return atbilde
 
 
 def menesa_vardi(menesis):
     sql = "SELECT * FROM vardadienas WHERE menesis=%s ORDER BY diena"
-    m = (menesis)
+    m = (menesis,)
     atbilde = get_all(sql, m)
     return atbilde
 

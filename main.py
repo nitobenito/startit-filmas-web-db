@@ -10,7 +10,7 @@ app = Flask('app')
 
 @app.route('/', methods=["GET", "POST"])
 def index_lapa():
-    return vd_kad('Aiva')
+    return vd_sodien()
     #return render_template('index.html')
 
 

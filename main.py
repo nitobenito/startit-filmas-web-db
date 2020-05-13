@@ -8,7 +8,7 @@ import data_import
 app = Flask('app')
 
 
-@app.route('/', methods=["GET", "POST"])
+@app.route('/', methods=["GET"])
 def index_lapa():
     return vd_sodien()
     #return render_template('index.html')
